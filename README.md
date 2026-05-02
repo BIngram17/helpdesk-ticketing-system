@@ -6,7 +6,19 @@ A full-stack help desk ticketing system built with React, Node.js, Express, Pris
 
 This project was built as a realistic internal IT help desk application. It allows users to log in, create and manage support tickets, assign tickets to technicians, track ticket status, manage users, review audit logs, and maintain a knowledge base for common troubleshooting issues.
 
-The project demonstrates full-stack development using a React frontend, Express backend, Prisma ORM, authentication with JSON Web Tokens, role-based access control, and environment-based configuration.
+The project demonstrates full-stack development using a React frontend, Express backend, Prisma ORM, JSON Web Token authentication, role-based access control, protected backend routes, and environment-based configuration.
+
+## Portfolio Highlights
+
+- Built a full-stack React and Node.js help desk application
+- Implemented JWT authentication with persistent login
+- Added role-based access control for admin and technician users
+- Created ticket CRUD functionality with status updates and assignment tools
+- Built admin user management with role editing
+- Added audit logging for important system actions
+- Created a searchable knowledge base with admin CRUD controls
+- Used environment variables for production-ready configuration
+- Refactored major UI sections into reusable React components
 
 ## Features
 
@@ -14,9 +26,9 @@ The project demonstrates full-stack development using a React frontend, Express 
 
 - JWT-based login
 - Persistent login using localStorage
-- Role-based access control
-- Admin and technician roles
 - Protected backend routes
+- Admin and technician roles
+- Role-based access control for admin-only pages and actions
 
 ### Ticket Management
 
@@ -35,17 +47,21 @@ The project demonstrates full-stack development using a React frontend, Express 
 - Add new users
 - Change user roles
 - Prevent accidental removal of own admin access
-- Admin-only access to user management
+- Admin-only access to user management tools
 
 ### Audit Logs
 
-- Track ticket creation
-- Track ticket updates
-- Track ticket deletion
-- Track unauthorized update attempts
-- Track user creation
-- Track user role changes
-- Track knowledge base article changes
+The system tracks key activity, including:
+
+- Ticket creation
+- Ticket updates
+- Ticket deletion
+- Unauthorized ticket update attempts
+- User creation
+- User role changes
+- Knowledge base article creation
+- Knowledge base article updates
+- Knowledge base article deletion
 
 ### Knowledge Base
 
@@ -57,13 +73,44 @@ The project demonstrates full-stack development using a React frontend, Express 
 
 ### Frontend UI
 
-- Sidebar layout
+- Sidebar navigation layout
 - Dashboard stats cards
 - Ticket cards
 - Modal editing
 - Search and filter controls
+- Admin-only views
 - Responsive layout
 - Clean help desk style interface
+
+## Screenshots
+
+### Login
+
+![Login Screen](screenshots/login.png)
+
+### Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+### Tickets
+
+![Tickets](screenshots/tickets.png)
+
+### Ticket Edit Modal
+
+![Ticket Edit Modal](screenshots/ticket-modal.png)
+
+### Users Admin Page
+
+![Users Admin Page](screenshots/users.png)
+
+### Audit Logs
+
+![Audit Logs](screenshots/audit-logs.png)
+
+### Knowledge Base
+
+![Knowledge Base](screenshots/knowledge-base.png)
 
 ## Tech Stack
 
@@ -80,15 +127,14 @@ The project demonstrates full-stack development using a React frontend, Express 
 - Node.js
 - Express
 - Prisma ORM
-- JWT
+- JSON Web Tokens
 - bcryptjs
 - CORS
 - dotenv
 
 ### Database
 
-- Prisma-supported database
-- Local development can use SQLite or PostgreSQL depending on configuration
+- PostgreSQL through Prisma ORM
 
 ## Project Structure
 
@@ -104,6 +150,7 @@ helpdesk-ticketing-system/
     package.json
 
   frontend/
+    public/
     src/
       components/
         Sidebar.jsx
@@ -115,5 +162,14 @@ helpdesk-ticketing-system/
       App.css
     .env.example
     package.json
+
+  screenshots/
+    Login.png
+    Dashboard.png
+    Tickets.png
+    Ticket-Modal.png
+    Users.png
+    Audit-Logs.png
+    Knowledge-Base.png
 
   README.md
