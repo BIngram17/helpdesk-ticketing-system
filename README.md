@@ -86,31 +86,31 @@ The system tracks key activity, including:
 
 ### Login
 
-![Login Screen](screenshots/login.png)
+![Login Screen](screenshots/Login.png)
 
 ### Dashboard
 
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/Dashboard.png)
 
 ### Tickets
 
-![Tickets](screenshots/tickets.png)
+![Tickets](screenshots/Tickets.png)
 
 ### Ticket Edit Modal
 
-![Ticket Edit Modal](screenshots/ticket-modal.png)
+![Ticket Edit Modal](screenshots/Ticket-Modal.png)
 
 ### Users Admin Page
 
-![Users Admin Page](screenshots/users.png)
+![Users Admin Page](screenshots/Users.png)
 
 ### Audit Logs
 
-![Audit Logs](screenshots/audit-logs.png)
+![Audit Logs](screenshots/Audit-Logs.png)
 
 ### Knowledge Base
 
-![Knowledge Base](screenshots/knowledge-base.png)
+![Knowledge Base](screenshots/Knowledge-Base.png)
 
 ## Tech Stack
 
