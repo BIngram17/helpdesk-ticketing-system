@@ -1,0 +1,52 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Ticket {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  priority    String
+  status      String   @default("Open")
+  category    String
+  requester   String
+  assignedTo  String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  password  String
+  role      String   @default("technician")
+  createdAt DateTime @default(now())
+}
+
+model AuditLog {
+  id        Int      @id @default(autoincrement())
+  action    String
+  userId    Int?
+  userEmail String?
+  role      String?
+  ticketId  Int?
+  details   String?
+  createdAt DateTime @default(now())
+}
+
+model KnowledgeArticle {
+  id          Int      @id @default(autoincrement())
+  title       String
+  category    String
+  content     String
+  authorEmail String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
